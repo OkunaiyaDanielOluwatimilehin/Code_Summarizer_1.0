@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showToast("Signup successful! Redirecting...");
     setTimeout(() => {
-      window.location.href = "/Onboarding/onboarding.html";
+      window.location.href = "Onboarding\onboarding.html";
     }, 1500);
   });
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showToast("Login successful! Redirecting...");
     setTimeout(() => {
-      window.location.href = "/Summarizer/summarizer.html";
+      window.location.href = "summary\summary.html";
     }, 1500);
   });
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/Frontend/index.html`
+        redirectTo: `${window.location.origin}Frontend\index.html`
       }
     });
   });
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: `${window.location.origin}/Summarizer/summarizer.html`
+        redirectTo: `${window.location.origin}Frontend\index.html`
       }
     });
   });
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (user && isAuthPage) {
       // Already signed in and on login/signup → redirect to dashboard
-      window.location.href = "/Summarizer/summarizer.html";
+      window.location.href = "summary\summary.html";
     }
   })();
 });

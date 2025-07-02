@@ -127,7 +127,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       const { data: { user }, error: sessionError } = await supabase.auth.getUser();
       if (sessionError || !user) {
         alert("User not logged in. Please log in before submitting.");
-        window.location.href = "/auth/login.html";
+        window.location.href = "auth\login.html";
         return;
       }
     
@@ -149,7 +149,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     
       alert("Profile saved successfully!");
       localStorage.clear();
-      window.location.href = "/Frontend/index.html";
+      window.location.href = "Frontend\index.html";
     }
 
   });
