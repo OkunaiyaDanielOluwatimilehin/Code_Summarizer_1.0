@@ -1,0 +1,131 @@
+@media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .typewriter-container {
+      font-size: 1.2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    #getStartedButton,
+    .dropdown-menu,
+    #userName{  
+      display: none !important;
+    }
+
+    #userDropdown{
+        background: none !important;
+        border: none !important;
+        color: none !important;
+    }
+
+    .avatar-button:hover .icon-avatar,
+  .avatar-button:focus .icon-avatar {
+    display: none;
+  }
+
+  .avatar-button:hover .icon-logout,
+  .avatar-button:focus .icon-logout {
+    display: inline;
+  }
+  #usernameLabel{
+    display: none !important;
+  }
+
+  .avatar-button i::before {
+    content: "\f2bd"; /* default: fa-circle-user */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transition: all 0.2s ease;
+  }
+
+  .avatar-button:hover i::before {
+    content: "\f2f5"; /* on hover: fa-sign-out-alt */
+  }
+  
+    #navLinks {
+      display: none;
+      flex-direction: column;
+      background-color: #0a0a20;
+      position: absolute;
+      top: 65px;
+      right: 20px;
+      width: 200px;
+      padding: 15px;
+      border-radius: 8px;
+      z-index: 999;
+    }
+  
+    #navLinks.show {
+      display: flex;
+    }
+  
+  
+    .footer-content h2 {
+      font-size: 1.4rem;
+    }
+  
+    .footer-content p {
+      font-size: 0.9rem;
+    }
+  
+    .footer-links {
+      flex-direction: flex-wrap;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .avatar-button:hover #avatarIcon {
+      content: none;
+      font-family: "Font Awesome 6 Free";
+    }
+  
+    .avatar-button:hover #avatarIcon::before {
+      content: "\f2f5"; /* fa-right-from-bracket */
+      font-weight: 900;
+    }
+  }
+  
+  /* Show "Create Project" button only on mobile */
+  .mobile-create-btn {
+    display: none;
+    background-color: #ff4b5c;
+    padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  }
+  .mobile-create-btn a{
+    font-size: 18px;
+  } 
+  
+  @media (max-width: 768px) {
+    .mobile-create-btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    }
+
+    .mobile-create-btn:hover {
+        background-color: #e03552;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(255, 75, 92, 0.4);
+        text-decoration: none;
+      }
+  }
+
+
+

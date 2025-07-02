@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Code Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+<body class="about-body"> 
+  <nav id="navbar">
+    <a href="/Frontend/index.html" class="logo-link">
+      <div class="logo">
+        <div class="code">Code</div>
+        <div class="summarizer-line">
+          <div class="summarizer">Summarizer</div>
+          <div class="version">1.0</div>
+        </div>
+      </div>
+    </a>
+    <ul id="navLinks">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./about.html" class="nav-link active">About</a></li>
+        <li><a href="#" id="contactNavBtn" class="contact-btn">Contact Me</a></li>
+      </ul>
+      <div class="user-actions">
+        <div class="user-menu-wrapper">
+         <!-- Avatar button and greeting -->
+          <button id="avatarButton" class="avatar-button">
+            <i class="fa-solid fa-circle-user fa-xl"></i>
+            <span id="usernameLabel" class="username-label">Hi, Guest</span>
+          </button>
+  
+        </div>
+          <div id="userDropdown" class="user-dropdown hidden">
+            <ul class="dropdown-menu">
+              <li><a href="/dashboard.html"><i class="fa-solid fa-gears"></i>Dashboard</a></li>
+              <li><a href="/new-project.html" class="create"><i class="fa-solid fa-arrow-up-right-from-square"></i>Create Project</a></li>
+              <li><a href="/edit-profile.html"> <i class="fa-solid fa-user-pen"></i>Edit Profile</a></li>
+              <li><a href="#" id="logoutBtn"> <i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+            </ul>
+          </div>
+        </div>     
+</nav>
+
+
+<div id="aboutContent"> 
+  <section id="aboutPage">
+    <div class="about-container">
+      <div class="about-intro">
+        <h2>About Code Summarizer 1.0</h2>
+        <p>
+          Our goal is to simplify the complexity of code and boost productivity for developers and learners alike. Whether you're debugging, learning a new language, or just trying to understand someone else's code, we've got your back.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+    <div class="about-section">
+    <h2>Tech Behind the Magic</h2>
+    <div class="tech-scroll">
+      <ul class="tech-list">
+        <li><i class="fab fa-html5"></i> HTML</li>
+        <li><i class="fab fa-css3-alt"></i> CSS</li>
+        <li><i class="fab fa-js-square"></i> JavaScript</li>
+        <li><i class="fab fa-node-js"></i> Node.js</li>
+        <li><i class="fas fa-server"></i> Express</li>
+        <li><i class="fas fa-robot"></i> OpenAI GPT</li>
+        <li><i class="fas fa-rocket"></i> Vercel</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+    
+  <div id="contactSection" class="contact-section hidden">
+    <h2>Get in Touch</h2>
+    <p>I'd love to hear from you! Drop a message below.</p>
+  <form
+id="contactForm"
+action="https://formspree.io/f/xqapjzzy"
+method="POST"
+>
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+<button type="button" id="goBackButton">← Back to About</button>
+</form>
+</div>
+   
+<!-- footer -->
+<footer id="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Code Summarizer. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+    </ul>
+  </div>
+</div>
+</footer>
+  </section>
+  
+</div>
+
+<script src="about.js"></script>
+<script type="module" src="index.js"></script>
+  </body>
+    </html>

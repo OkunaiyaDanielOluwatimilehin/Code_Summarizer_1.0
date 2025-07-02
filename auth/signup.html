@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - Your Project</title>
+  <link rel="stylesheet" href="auth.css"/>
+  <script src="https://kit.fontawesome.com/1f7c50f8ab.js" crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+ 
+  <div class="auth-container">
+    <form class="auth-form" id="signup-form">
+      <a href="/Frontend/index.html" class="back-button">← Back to Home</a>
+      <h2>Create Account</h2>
+    
+      <!-- Step 1: Username only -->
+<form id="signup-form">
+  <label for="signup-email">Email</label>
+  <input type="email" id="signup-email" placeholder="Enter your email" required />
+
+  <label for="signup-password">Password</label>
+  <input type="password" id="signup-password" placeholder="Enter password" required />
+  <button type="submit" class="btn full-width">Sign Up <i class="fa-solid fa-right-to-bracket"></i></button>
+  <div class="oauth-buttons stacked">
+    <button type="button" id="googleSignIn" class="btn oauth-btn google full-width">
+      <i class="fa-brands fa-google"></i> Continue with Google
+    </button>
+    <button type="button" id="githubSignIn" class="btn oauth-btn github full-width">
+      <i class="fa-brands fa-github"></i> Continue with GitHub
+    </button>
+  </div>
+  <p class="switch-link">Already have an account? <a href="login.html">Login here</a></p>
+</div>
+</form>
+
+  <div id="toast" class="toast">Signup successful! 🎉</div>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Code Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Your homepage content here -->
+  
+    <nav id="navbar">
+      <a href="#" class="logo-link">
+      <div class="logo">
+        <div class="code">Code</div>
+        <div class="summarizer-line">
+          <div class="summarizer">Summarizer</div>
+          <div class="version">1.0</div>
+        </div>
+      </div>
+    </a>
+      <ul id="navLinks">
+        <li><a href="./index.html" class="nav-link active">Home</a></li>
+        <li><a href="./about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="user-actions">
+      <div class="user-menu-wrapper">
+       <!-- Avatar button and greeting -->
+        <button id="avatarButton" class="avatar-button">
+          <i class="fa-solid fa-circle-user fa-xl"></i>
+          <span id="usernameLabel" class="username-label">Hi, Guest</span>
+        </button>
+
+      </div>
+        <div id="userDropdown" class="user-dropdown hidden">
+          <ul class="dropdown-menu">
+            <li><a href="/dashboard.html"><i class="fa-solid fa-gears"></i>Dashboard</a></li>
+            <li><a href="/new-project.html" class="create"><i class="fa-solid fa-arrow-up-right-from-square"></i>Create Project</a></li>
+            <li><a href="/edit-profile.html"> <i class="fa-solid fa-user-pen"></i>Edit Profile</a></li>
+            <li><a href="#" id="logoutBtn"> <i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>          
+    </nav>
+    
+    
+  <!-- 🔹 Main Content (initially hidden) -->
+  <div id="mainContent"> 
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="animated-tech-background"></div>
+      <div class="hero-content">
+          <div class="hero-text">
+              <h1>Summarize Code <br> in Seconds.</h1>
+              <div class="typewriter-container">
+                  <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+              </div>
+              <p>Seamlessly transform complex code into concise, <br> human-readable summaries powered by advanced AI. <br>Perfect for students, developers, and learners.</p>
+              <div class="hero-buttons">
+                <button id="getStartedButton" class="btn primary"><a href="/summary/summary.html">
+  Get Started <i class="fas fa-arrow-right"></i>
+</a>
+</button>
+  <a href="/Summarizer/summarizer.html" class="mobile-create-btn">+ Create Project</a>
+              </div>
+          </div>
+      </div>
+  </section>
+</div>    
+   <!-- Footer -->
+  <footer id="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Code Summarizer. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer> 
+    <script src="https://kit.fontawesome.com/1f7c50f8ab.js" crossorigin="anonymous"></script> 
+</body>
+<script type="module" src="index.js"></script>
+<script type="module" src="session.js"></script>
+</html>

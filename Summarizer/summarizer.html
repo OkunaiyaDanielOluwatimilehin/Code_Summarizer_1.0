@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="summarizer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Summarizer-page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <a href="/Frontend/index.html" id="backButton" class="top-back-button">
+    <p><i class="fa-solid fa-arrow-left"></i> Go back</p>
+  </a>
+  
+  
+  <div class="user-actions">
+    <div class="user-menu-wrapper">
+     <!-- Avatar button and greeting -->
+      <button id="avatarButton" class="avatar-button">
+        <i class="fa-solid fa-circle-user fa-xl"></i>
+        <span id="usernameLabel" class="username-label">Hi, Guest</span>
+      </button>
+
+    </div>
+      <div id="userDropdown" class="user-dropdown hidden">
+        <ul class="dropdown-menu">
+          <li><a href="/dashboard.html"><i class="fa-solid fa-gears"></i>Dashboard</a></li>
+          <li><a href="/new-project.html" class="create"><i class="fa-solid fa-arrow-up-right-from-square"></i>Create Project</a></li>
+          <li><a href="/edit-profile.html"> <i class="fa-solid fa-user-pen"></i>Edit Profile</a></li>
+          <li><a href="#" id="logoutBtn"> <i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+        </ul>
+      </div>
+    </div>  
+
+    <section id="summarizerWrapper" >
+
+      <div class="mainAppWrapper">
+        <!-- input section -->
+        <section id="inputSection">
+          <div id="inputContainer" class="input-with-buttons">
+            <textarea id="inputBox" placeholder="Enter your text..."></textarea>
+            <button id="submitButton" class="icon-button" aria-label="Summarize">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </button>
+            </div>
+            <p id="loginPrompt"> <a href="/auth/login.html">Sign in</a> to save your summaries and access them later.
+            </p>
+            
+    </section>
+    
+    <!-- Output Box -->
+  <section id="outputSection" class="hidden">
+    <div id="outputContainer">
+      <button id="copyButton">Copy</button>
+      <textarea id="outputBox" placeholder="Summary will appear here..." readonly></textarea>
+    </div>
+   </section>
+      </div>
+  </section>
+
+  <section>
+    <h2>Your Summarization History</h2>
+    <div id="historyContainer" class="history-box">
+      <!-- History items will be injected here -->
+    </div>
+  </section>
+  
+</body>
+<script type="module" src="test.js"></script>
+</html>

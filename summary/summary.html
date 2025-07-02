@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Summarizer-page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="/Frontend/index.html" id="backButton" class="top-back-button">
+        <p><i class="fa-solid fa-arrow-left"></i> Go back</p>
+      </a>
+      
+      <div class="page-wrapper">
+
+           <!-- Sidebar Toggle Button -->
+<button id="menuToggle" class="menu-toggle">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
+<!-- Sidebar -->
+<aside id="userSidebar" class="user-sidebar hidden">
+  <div class="sidebar-header">
+    <i class="fa-solid fa-circle-user fa-2x"></i>
+    <span id="usernameLabel" class="username-label">Hi, Guest</span>
+  </div>
+
+  <ul class="sidebar-menu">
+    <li><a href="/dashboard.html"><i class="fa-solid fa-gears"></i> Dashboard</a></li>
+    <li><a href="/new-project.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> Create Project</a></li>
+    <li><a href="/edit-profile.html"><i class="fa-solid fa-user-pen"></i> Edit Profile</a></li>
+    <li><a href="#" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+  </ul>
+</aside>
+
+  <div class="main-content">
+    <div class="chat-container" id="chat">
+      <div class="chat-scroll-spacer"></div>
+      <!-- Chat bubbles will be appended here -->
+    </div>
+  
+    <div class="input-section">
+      <textarea id="userInput" rows="3" placeholder="Paste your code here..."></textarea>
+      <button id="submitButton" class="icon-button" aria-label="Summarize">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </button>
+    </div>
+  </div>
+    </div>
+   <script type="module" src="script.js" ></script>
+</body>
+</html>
