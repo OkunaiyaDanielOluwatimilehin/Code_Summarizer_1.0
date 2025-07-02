@@ -81,7 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
       userDropdown.classList.remove("show");
       setTimeout(() => userDropdown.classList.add("hidden"), 200);
     }
-  });
+      });
+    })(); // Close the nested async function
+  
+ 
+// Close the DOMContentLoaded event listener
   
   // Click outside to close
   document.addEventListener("click", (e) => {
@@ -117,16 +121,36 @@ document.addEventListener("DOMContentLoaded", () => {
       if (window.innerWidth <= 768) {
         // On mobile, clicking avatar logs out
         await supabase.auth.signOut();
-        window.location.href = "Frontend/auth/login.html";
+        window.location.href = "Frontend\index.html";
       }
     });
   
+    
     // Desktop logout button
-    document.getElementById("logoutBtn")?.addEventListener("click", async (e) => {
+    const logoutBtn = document.getElementById("logoutBtn");
+
+(async () => {
+  const {
+    data: { user },
+    error
+  } = await supabase.auth.getUser();
+
+  if (!logoutBtn) return;
+
+  if (!user) {
+    logoutBtn.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> Login`;
+    logoutBtn.setAttribute("href", "/auth/login.html");
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = "/auth/login.html";
+    });
+  } else {
+    logoutBtn.innerHTML = `<i class="fa-solid fa-right-from-bracket"></i> Logout`;
+    logoutBtn.addEventListener("click", async (e) => {
       e.preventDefault();
       await supabase.auth.signOut();
-      window.location.href = "Frontend/auth/login.html";
+      window.location.href = "/Frontend/index.html";
     });
-  })();
-  
-  });
+  }
+})();
+});
